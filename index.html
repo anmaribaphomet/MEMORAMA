@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#210d20">
+    <title>MM</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/functions.js" defer></script>
+</head>
+
+<body>
+    <div class="cinema cinema-top"></div>
+    <div class="cinema cinema-bottom"></div>
+
+    <header class="topbar">
+        <a class="logo" href="#">
+            <span class="logo-icon">♡</span>
+            <span>MM®</span>
+        </a>
+        <a class="portafolio"
+           href="https://anmaribaphomet.github.io/mm_portafolio/">
+            ← Regresar al Portfolio
+        </a>
+        <span class="top-tag">✦ S04 11.26 ✦</span>
+    </header>
+
+    <main class="page">
+        <img src="./img/Sanzu.png" class="mascota-fija" alt="Sanzu">
+        <img src="./img/Madoka.png" class="mascota-fija2" alt="Madoka">
+        <section class="intro">
+            <div class="eyebrow">✧ Juego de cartas ✧</div>
+            <h1>Magika<span>Gang</span></h1>
+            <p>Encuentra las parejas y demuestra tu memoria.</p>
+        </section>
+
+        <section class="game-layout">
+            <aside class="side-panel">
+                <div class="side-label">Perfil del jugador</div>
+                <div class="avatar">♡</div>
+                <h2>Jugador</h2>
+                <p class="side-description">Aqui podras ver tu progreso.</p>
+
+                <div class="side-divider"></div>
+
+                <div class="mini-stat">
+                    <span>✿ PAREJAS</span>
+                    <strong id="parejas">0 / 10</strong>
+                </div>
+                <div class="mini-stat">
+                    <span>♡ INTENTOS</span>
+                    <strong id="intentos">0</strong>
+                </div>
+
+                <button class="restart-button" id="reiniciar">
+                    ↻ REINICIAR JUEGO
+                </button>
+            </aside>
+
+            <section class="board-panel">
+                <div class="board-heading">
+                    <div>
+                        <span class="board-kicker">TU OBJETIVO</span>
+                        <h2>¡Encuentra las parejas!</h2>
+                    </div>
+                    <span class="level-tag">S04</span>
+                </div>
+
+                <div class="progress-track">
+                    <div class="progress-fill" id="progreso"></div>
+                </div>
+
+                <div id="juego" class="game-board" aria-label="Tablero de memorama">
+                    <div class="board-placeholder">
+                        <span>♡</span>
+                        <p>Elige un tema para comenzar</p>
+                    </div>
+                </div>
+
+                <div class="board-footer">
+                    <span>✦ TOMA TU TIEMPO ✦</span>
+                    <span>20 CARTAS · 10 PAREJAS</span>
+                </div>
+            </section>
+
+            <aside class="info-panel">
+                <div class="info-decoration">✧</div>
+                <span class="side-label">CÓMO JUGAR</span>
+                <p>Voltea dos tarjetas y busca las imágenes iguales.</p>
+
+                <div class="rule">
+                    <span>01</span>
+                    <p>Selecciona dos tarjetas.</p>
+                </div>
+                <div class="rule">
+                    <span>02</span>
+                    <p>Si coinciden, ¡la pareja es tuya!</p>
+                </div>
+                <div class="rule">
+                    <span>03</span>
+                    <p>Encuentra las diez parejas para ganar.</p>
+                </div>
+            </aside>
+        </section>
+
+        <footer >
+            <span style=" width: 100%;
+    text-align: center;" >Hecho por Maria Meza</span>
+        </footer>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-box">
+            <div class="modal-sparkle">✧ ♡ ✧</div>
+            <span class="modal-kicker">BIENVENIDO A</span>
+            <h2>Magika <span>Gang</span></h2>
+            <p>Elige tu colección favorita para comenzar.</p>
+
+            <div class="theme-options">
+                <button class="theme-button girl-theme" onclick="elegirTema(1)">
+                    <span class="theme-icon">♡</span>
+                    <strong>Chica</strong>
+                    <small>Minitas Mágicas</small>
+                </button>
+                <button class="theme-button boy-theme" onclick="elegirTema(2)">
+                    <span class="theme-icon">☆</span>
+                    <strong>Chico</strong>
+                    <small>Pandilleros</small>
+                </button>
+            </div>
+            <small class="modal-note">✦ Escoje tu mundo ✦</small>
+        </div>
+    </div>
+
+    <div id="victoria" class="modal victory-modal">
+        <div class="modal-box">
+            <div class="modal-sparkle">★ ♡ ★</div>
+            <span class="modal-kicker">MISIÓN COMPLETADA</span>
+            <h2>¡Lo lograste!</h2>
+            <p>¡Encontraste todas las parejas!</p>
+            <p class="victory-score" id="resumen-victoria"></p>
+            <button class="play-again" id="jugar-otra-vez">♡ JUGAR DE NUEVO</button>
+        </div>
+    </div>
+</body>
+</html>
